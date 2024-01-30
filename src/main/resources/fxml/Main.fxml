@@ -15,55 +15,66 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<GridPane alignment="TOP_CENTER" hgap="1" prefHeight="642.0" prefWidth="838.0" style="-fx-background-insets: 1; -fx-background-color: #ebeced;" vgap="4.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ivanskodje.MainController">
+<GridPane alignment="TOP_CENTER" hgap="1" prefHeight="930.0" prefWidth="1218.0" style="-fx-background-insets: 1; -fx-background-color: #ebeced;" stylesheets="@../AtlantaFX-2.0.1-scenebuilder-themes/com/oracle/javafx/scenebuilder/kit/util/css/caspian/cupertino-dark.css" vgap="4.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ivanskodje.MainController">
 
-    <HBox maxWidth="1.7976931348623157E308" spacing="10" style="-fx-background-color: #111216;" GridPane.columnIndex="0" GridPane.hgrow="ALWAYS" GridPane.rowIndex="0">
-        <Button maxHeight="40.0" maxWidth="60.0" minHeight="40.0" minWidth="60.0" onAction="#handleStartButtonAction" text="Run" textAlignment="CENTER">
-            <font>
-                <Font size="14.0" />
-            </font>
+   <HBox maxWidth="1.7976931348623157E308" spacing="10" style="-fx-background-color: #111216;" GridPane.columnIndex="0" GridPane.hgrow="ALWAYS" GridPane.rowIndex="0">
+      <Button maxHeight="40.0" maxWidth="60.0" minHeight="40.0" minWidth="60.0" onAction="#handleStartButtonAction" text="Run" textAlignment="CENTER">
+         <font>
+            <Font size="14.0" />
+         </font>
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>
-        </Button>
-        <Button maxHeight="40.0" maxWidth="60.0" minHeight="40.0" minWidth="60.0" onAction="#handlePauseButtonAction" text="Pause">
-            <font>
-                <Font size="14.0" />
-            </font>
+      </Button>
+      <Button maxHeight="40.0" maxWidth="60.0" minHeight="40.0" minWidth="60.0" onAction="#handlePauseButtonAction" text="Pause">
+         <font>
+            <Font size="14.0" />
+         </font>
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>
-        </Button>
-        <Button maxHeight="40.0" maxWidth="60.0" minHeight="40.0" minWidth="60.0" onAction="#handleStopButtonAction" text="Stop">
-            <font>
-                <Font size="14.0" />
-            </font>
+      </Button>
+      <Button maxHeight="40.0" maxWidth="60.0" minHeight="40.0" minWidth="60.0" onAction="#handleStopButtonAction" text="Stop">
+         <font>
+            <Font size="14.0" />
+         </font>
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>
-        </Button>
-        <Button maxHeight="40.0" maxWidth="60.0" minHeight="40.0" minWidth="60.0" onAction="#handlePrveButtonAction" text="Export">
-            <font>
-                <Font size="14.0" />
-            </font>
+      </Button>
+      <Button maxHeight="40.0" maxWidth="60.0" minHeight="40.0" minWidth="60.0" onAction="#handlePrveButtonAction" text="Export">
+         <font>
+            <Font size="14.0" />
+         </font>
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>
-        </Button>
+      </Button>
+      <Button maxHeight="40.0" maxWidth="60.0" minHeight="40.0" minWidth="60.0" onAction="#handleOpenbuttonAction" text="Open">
+         <font>
+            <Font size="14.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
       <GridPane.margin>
          <Insets />
       </GridPane.margin>
       <padding>
          <Insets bottom="20.0" left="10.0" right="10.0" top="20.0" />
       </padding>
-    </HBox>
-    <Text fx:id="actiontarget" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+   </HBox>
+   <Text fx:id="actiontarget" style="-fx-fill: #444 !important;" text="Status:" GridPane.columnIndex="0" GridPane.rowIndex="1">
+      <GridPane.margin>
+         <Insets left="10.0" />
+      </GridPane.margin></Text>
    <ScrollPane fitToHeight="true" fitToWidth="true" prefHeight="476.0" prefWidth="779.0" style="-fx-background-color: #d7d8da;" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="2" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
       <content>
-          <GridPane alignment="BASELINE_CENTER" hgap="4" style="-fx-background-color: #d7d8da;" vgap="4">
-              <padding>
-                  <Insets bottom="10.0" left="25.0" right="25.0" top="25.0" />
-              </padding>
+         <GridPane alignment="BASELINE_CENTER" hgap="4" style="-fx-background-color: #d7d8da;" vgap="4">
+            <padding>
+               <Insets bottom="10.0" left="25.0" right="25.0" top="25.0" />
+            </padding>
             <VBox prefHeight="200.0" prefWidth="100.0">
                <children>
                   <Label alignment="TOP_CENTER" contentDisplay="CENTER" text="ORIGINALS" textAlignment="CENTER" underline="true">
@@ -71,14 +82,14 @@
                         <Font name="System Bold" size="24.0" />
                      </font>
                   </Label>
-                    <ImageView fitHeight="450.0" fitWidth="350.0" pickOnBounds="true" preserveRatio="true">
-                        <image>
-                            <Image url="@../images/add_image.png" />
-                        </image>
-                    </ImageView>
+                  <ImageView fx:id="image_origin" fitHeight="450.0" fitWidth="350.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/ai_1.png" />
+                     </image>
+                  </ImageView>
                   <HBox alignment="TOP_RIGHT" prefHeight="100.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
                      <children>
-                        <Label alignment="TOP_RIGHT" contentDisplay="CENTER" text="file_name_1.png" textAlignment="CENTER">
+                        <Label fx:id="label_origin_name" alignment="TOP_RIGHT" contentDisplay="CENTER" text="file_name_1.png" textAlignment="CENTER">
                            <HBox.margin>
                               <Insets />
                            </HBox.margin>
@@ -100,11 +111,11 @@
                         <Font name="System Bold" size="24.0" />
                      </font>
                   </Label>
-                    <ImageView fitHeight="450.0" fitWidth="350.0" pickOnBounds="true" preserveRatio="true">
-                        <image>
-                            <Image url="@../images/ai_1.png" />
-                        </image>
-                    </ImageView>
+                  <ImageView fitHeight="450.0" fitWidth="350.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/ai_1.png" />
+                     </image>
+                  </ImageView>
                </children>
                <padding>
                   <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
@@ -117,11 +128,11 @@
                         <Font name="System Bold" size="24.0" />
                      </font>
                   </Label>
-                    <ImageView fitHeight="450.0" fitWidth="350.0" pickOnBounds="true" preserveRatio="true">
-                        <image>
-                            <Image url="@../images/ai_1.png" />
-                        </image>
-                    </ImageView>
+                  <ImageView fitHeight="450.0" fitWidth="350.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/ai_1.png" />
+                     </image>
+                  </ImageView>
                </children>
                <padding>
                   <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
@@ -134,11 +145,11 @@
                         <Font name="System Bold" size="24.0" />
                      </font>
                   </Label>
-                    <ImageView fitHeight="450.0" fitWidth="350.0" pickOnBounds="true" preserveRatio="true">
-                        <image>
-                            <Image url="@../images/ai_1.png" />
-                        </image>
-                    </ImageView>
+                  <ImageView fitHeight="450.0" fitWidth="350.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/ai_1.png" />
+                     </image>
+                  </ImageView>
                </children>
                <padding>
                   <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
@@ -151,11 +162,11 @@
                         <Font name="System Bold" size="24.0" />
                      </font>
                   </Label>
-                    <ImageView fitHeight="450.0" fitWidth="350.0" pickOnBounds="true" preserveRatio="true">
-                        <image>
-                            <Image url="@../images/ai_1.png" />
-                        </image>
-                    </ImageView>
+                  <ImageView fitHeight="450.0" fitWidth="350.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/ai_1.png" />
+                     </image>
+                  </ImageView>
                </children>
                <padding>
                   <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
@@ -168,11 +179,11 @@
                         <Font name="System Bold" size="24.0" />
                      </font>
                   </Label>
-                    <ImageView fitHeight="450.0" fitWidth="350.0" pickOnBounds="true" preserveRatio="true">
-                        <image>
-                            <Image url="@../images/ai_1.png" />
-                        </image>
-                    </ImageView>
+                  <ImageView fitHeight="450.0" fitWidth="350.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/ai_1.png" />
+                     </image>
+                  </ImageView>
                </children>
                <padding>
                   <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
@@ -185,11 +196,11 @@
                         <Font name="System Bold" size="24.0" />
                      </font>
                   </Label>
-                    <ImageView fitHeight="450.0" fitWidth="350.0" pickOnBounds="true" preserveRatio="true">
-                        <image>
-                            <Image url="@../images/ai_1.png" />
-                        </image>
-                    </ImageView>
+                  <ImageView fitHeight="450.0" fitWidth="350.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/ai_1.png" />
+                     </image>
+                  </ImageView>
                </children>
                <padding>
                   <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
@@ -202,36 +213,36 @@
                         <Font name="System Bold" size="24.0" />
                      </font>
                   </Label>
-                    <ImageView fitHeight="450.0" fitWidth="350.0" pickOnBounds="true" preserveRatio="true">
-                        <image>
-                            <Image url="@../images/ai_1.png" />
-                        </image>
-                    </ImageView>
+                  <ImageView fitHeight="450.0" fitWidth="350.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/ai_1.png" />
+                     </image>
+                  </ImageView>
                </children>
                <padding>
                   <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
                </padding>
             </VBox>
-              <columnConstraints>
-                  <ColumnConstraints />
-                  <ColumnConstraints />
-                  <ColumnConstraints />
-                  <ColumnConstraints />
-              </columnConstraints>
-              <rowConstraints>
-                  <RowConstraints />
-                  <RowConstraints />
-              </rowConstraints>
-          </GridPane>
+            <columnConstraints>
+               <ColumnConstraints />
+               <ColumnConstraints />
+               <ColumnConstraints />
+               <ColumnConstraints />
+            </columnConstraints>
+            <rowConstraints>
+               <RowConstraints />
+               <RowConstraints />
+            </rowConstraints>
+         </GridPane>
       </content>
    </ScrollPane>
-    <columnConstraints>
-        <ColumnConstraints />
-    </columnConstraints>
-    <rowConstraints>
-        <RowConstraints />
-        <RowConstraints />
+   <columnConstraints>
+      <ColumnConstraints />
+   </columnConstraints>
+   <rowConstraints>
       <RowConstraints />
-    </rowConstraints>
+      <RowConstraints />
+      <RowConstraints />
+   </rowConstraints>
 
 </GridPane>

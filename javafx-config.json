@@ -1,0 +1,30 @@
+{
+    "artifacts": [
+        {
+            "groupId": "org.openjfx",
+            "artifactId": "javafx-controls",
+            "version": "21.0.2"
+        },
+        {
+            "groupId": "org.openjfx",
+            "artifactId": "javafx-fxml",
+            "version": "21.0.2"
+        },
+        {
+            "groupId": "org.openjfx",
+            "artifactId": "javafx-graphics",
+            "version": "21.0.2"
+        },
+        {
+            "groupId": "org.openjfx",
+            "artifactId": "javafx-base",
+            "version": "21.0.2"
+        }
+    ],
+    "repositories": [
+        {
+            "id": "openjfx",
+            "url": "file:./lib"
+        }
+    ]
+}

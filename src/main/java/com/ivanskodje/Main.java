@@ -2,6 +2,9 @@ package com.ivanskodje;
 
 import com.ivanskodje.preloader.AppPreloader;
 import com.sun.javafx.application.LauncherImpl;
+
+import atlantafx.base.theme.PrimerDark;
+import atlantafx.base.theme.PrimerLight;
 import javafx.application.Application;
 import javafx.application.Preloader;
 import javafx.fxml.FXMLLoader;
@@ -41,6 +44,8 @@ public class Main extends Application
     @Override
     public void start(Stage primaryStage)
     {
+        
+        
         String fxmlPath = "/fxml/Main.fxml";
         try
         {
@@ -66,6 +71,9 @@ public class Main extends Application
 
     public static void main(String[] args)
     {
+        // find more themes in 'atlantafx.base.theme' package
+        // Application.setUserAgentStylesheet(new PrimerLight().getUserAgentStylesheet());
+        // Application.setUserAgentStylesheet(new PrimerDark().getUserAgentStylesheet());
         LauncherImpl.launchApplication(Main.class, AppPreloader.class, args);
     }
 }
